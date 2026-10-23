@@ -65,7 +65,7 @@
       "type": "album",
       "title": "2025 Mark Gunter Photo Awards: 7th Place",
       "subtitle": "International cycling photography award, shot on film in Morocco",
-      "coverImage": "new-mountain (1).jpg",
+      "coverImage": "gunter-award (1).JPG",
       "date": "January 2026"
     },
     {
@@ -81,7 +81,7 @@
       "type": "album",
       "title": "Intertrailing, Singletrack Magazine",
       "subtitle": "Singletrack Magazine, Issue 163, UK, November 2025, words and photos, shot in Switzerland and Italy",
-      "coverImage": "fhada-singletrack (1).jpg",
+      "coverImage": "intertrailing-singletrack (1).jpg",
       "date": "November 2025"
     },
     {
@@ -97,7 +97,7 @@
       "type": "album",
       "title": "Atlas, New Mountain Magazine",
       "subtitle": "New Mountain Magazine, Issue 2, UK, August 2025, words and photos, shot on film in Morocco",
-      "coverImage": "new-mountain (9).JPG",
+      "coverImage": "new-mountain (10).JPG",
       "date": "August 2025"
     },
     {
@@ -105,7 +105,7 @@
       "type": "album",
       "title": "Pisgah Up In A Brewery, Singletrack Magazine",
       "subtitle": "Singletrack Magazine, Issue 161, UK, June 2025, words and photos, shot on film and digital in the USA",
-      "coverImage": "benidorm-biking (1).jpg",
+      "coverImage": "singletrack-pisgah (10).jpg",
       "date": "June 2025"
     },
     {
@@ -208,10 +208,19 @@
       "bbc-homepage.JPG"
     ],
     "beina-website": [
-      "beina-website (1).jpg"
+      "beina-website (1).jpg", "beina-website.jpg"
     ],
     "sidetracked-moment": [
       "sidetracked-moment.jpg"
+    ]
+     "gunter-award": [
+      "gunter-award (1).jpg"
+    ]
+    "singletrack-pisgah": [
+      "singletrack-pisgah (1).jpg", "singletrack-pisgah (1).png", "singletrack-pisgah (2).png", "singletrack-pisgah (2).jpg", "singletrack-pisgah (3).jpg", "singletrack-pisgah (4).jpg", "singletrack-pisgah (5).jpg", "singletrack-pisgah (6).jpg", "singletrack-pisgah (7).jpg", "singletrack-pisgah (8).jpg", "singletrack-pisgah (9).jpg", "singletrack-pisgah (10).jpg"
+    ]
+    "intertrailing-singletrack": [
+      "intertrailing-singletrack (1).jpg", "intertrailing-singletrack (2).jpg", "intertrailing-singletrack (3).jpg", "intertrailing-singletrack (4).jpg", "intertrailing-singletrack (5).jpg", "intertrailing-singletrack (6).jpg"
     ]
   }
 }
