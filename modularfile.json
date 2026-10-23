@@ -1,0 +1,83 @@
+{
+  "siteTitle": "Munro Biking",
+  "copyright": "Copyright Luke Bradley 2026",
+  "legalFooter": "Trading as Munro Biking • Edinburgh, Scotland • Contact: info@munrobiking.co.uk • Compliant with UK Consumer Contracts Regulations.",
+  "paypalBusinessEmail": "luke@munrobiking.co.uk",
+  "homeScrollItems": [
+    {
+      "id": "ben-nevis",
+      "type": "album",
+      "title": "Ascending Ben Nevis: A Photographic Journey",
+      "subtitle": "Highland ridges and rocky descents",
+      "coverImage": "images/ben-nevis-1.jpg",
+      "date": "October 2026"
+    },
+    {
+      "id": "cairngorms-loop",
+      "type": "article",
+      "title": "Documenting the Cairngorms Loop",
+      "subtitle": "Field notes on remote multi-day bikepacking",
+      "coverImage": "images/cairngorms-1.jpg",
+      "date": "September 2026"
+    },
+    {
+      "id": "torridon-ridge",
+      "type": "album",
+      "title": "Torridon Sandstone & Skies",
+      "subtitle": "Exploring ancient geological formations",
+      "coverImage": "images/torridon-1.jpg",
+      "date": "August 2026"
+    }
+  ],
+  "calendars": [
+    {
+      "id": "calendar-2026",
+      "title": "Munro Biking 2026 Calendar",
+      "year": "2026",
+      "size": "A3 Landscape (420 x 297mm)",
+      "price": 18.00,
+      "cover": "images/cal-2026-cover.jpg",
+      "insideImages": [
+        "images/cal-2026-1.jpg",
+        "images/cal-2026-2.jpg",
+        "images/cal-2026-3.jpg"
+      ],
+      "description": "Thirteen fine-art photographic prints celebrating Scotland's high peaks across all four seasons. Printed on heavyweight archival matte paper."
+    },
+    {
+      "id": "cairngorms-calendar",
+      "year": "2026",
+      "title": "Cairngorms National Park Calendar",
+      "size": "A4 Portrait (210 x 297mm)",
+      "price": 15.00,
+      "cover": "images/cal-cairngorms-cover.jpg",
+      "insideImages": [
+        "images/cal-cairngorms-1.jpg",
+        "images/cal-cairngorms-2.jpg",
+        "images/cal-cairngorms-3.jpg"
+      ],
+      "description": "An intimate visual study of the Cairngorms plateau, pinewoods, and glacial glens."
+    },
+    {
+      "id": "highlands-calendar",
+      "year": "2026",
+      "title": "Highland Ridges Square Calendar",
+      "size": "300 x 300mm Square",
+      "price": 16.00,
+      "cover": "images/cal-square-cover.jpg",
+      "insideImages": [
+        "images/cal-square-1.jpg",
+        "images/cal-square-2.jpg",
+        "images/cal-square-3.jpg"
+      ],
+      "description": "Clean square format showcasing remote bikepacking expeditions and mountain vistas."
+    }
+  ],
+  "galleries": {
+    "ben-nevis": [
+      "images/ben-nevis-1.jpg", "images/ben-nevis-2.jpg", "images/ben-nevis-3.jpg", "images/ben-nevis-4.jpg",
+      "images/ben-nevis-5.jpg", "images/ben-nevis-6.jpg", "images/ben-nevis-7.jpg", "images/ben-nevis-8.jpg",
+      "images/ben-nevis-9.jpg", "images/ben-nevis-10.jpg", "images/ben-nevis-11.jpg", "images/ben-nevis-12.jpg"
+    ]
+  }
+}

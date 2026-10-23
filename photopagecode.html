@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Album • Munro Biking</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .square-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+    .square-thumb {
+      aspect-ratio: 1/1;
+      width: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      background: #EAE5DC;
+      transition: opacity 0.2s;
+    }
+    .square-thumb:hover { opacity: 0.85; }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="brand">
+      <h1>Munro Biking</h1>
+      <ul class="nav-links">
+        <li><a href="shop.html">Shop <span id="cart-count">🛒 (0)</span></a></li>
+        <li><a href="index.html">Journal & Albums</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-footer">
+      Copyright Luke Bradley 2026
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div style="margin-bottom: 24px;">
+      <a href="index.html" style="font-size: 13px; color: #666; text-decoration: none;">← Back to Home</a>
+    </div>
+    <div class="hero-intro">
+      <h2 id="album-title">Loading Album...</h2>
+      <p id="album-subtitle">Published October 2026</p>
+    </div>
+
+    <div class="square-grid" id="square-grid">
+      <!-- 12 Square Photos inserted here -->
+    </div>
+
+    <footer>
+      <p>Copyright Luke Bradley 2026</p>
+    </footer>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">Close ×</button>
+    <img id="lightbox-img" src="" alt="Enlarged view">
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-color: #FBF9F5;
+  --panel-bg: #FFFFFF;
+  --text-main: #1A1A1A;
+  --text-muted: #666666;
+  --border-color: #EAE5DC;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  display: flex;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Fixed Left White Panel */
+aside.sidebar {
+  width: 240px;
+  background-color: var(--panel-bg);
+  border-right: 1px solid var(--border-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.brand h1 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--text-main);
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--text-muted);
+  transition: color 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+/* Main Content Area */
+main.main-content {
+  margin-left: 240px;
+  flex: 1;
+  padding: 60px 48px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero-intro {
+  margin-bottom: 40px;
+}
+
+.hero-intro h2 {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.hero-intro p {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+/* Horizontal Scrolling Container */
+.horizontal-scroll-container {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  padding-bottom: 24px;
+  scrollbar-width: thin;
+}
+
+.scroll-card {
+  min-width: 320px;
+  max-width: 320px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.scroll-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  background-color: #EAE5DC;
+  margin-bottom: 14px;
+  transition: opacity 0.2s;
+}
+
+.scroll-card:hover img { opacity: 0.9; }
+
+.scroll-card h3 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.scroll-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Grid for Shop & Galleries */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  margin-bottom: 16px;
+  background: #EAE5DC;
+}
+
+.card h3 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.btn-primary {
+  background: var(--text-main);
+  color: #FFF;
+  border: none;
+  padding: 12px 20px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 16px;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover { background: #333; }
+
+/* Lightbox Modal */
+.lightbox {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.lightbox.active { opacity: 1; pointer-events: auto; }
+
+.lightbox img {
+  max-width: 85vw;
+  max-height: 85vh;
+  object-fit: contain;
+  background: #FFF;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 30px; right: 40px;
+  color: #FFF;
+  background: none;
+  border: 1px solid #FFF;
+  padding: 8px 16px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-color);
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
