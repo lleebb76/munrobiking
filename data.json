@@ -81,7 +81,7 @@
       "type": "album",
       "title": "Intertrailing, Singletrack Magazine",
       "subtitle": "Singletrack Magazine, Issue 163, UK, November 2025, words and photos, shot in Switzerland and Italy",
-      "coverImage": "intertrailing-singletrack (1).jpg",
+      "coverImage": "Intertrailing-singletrack (1).jpg",
       "date": "November 2025"
     },
     {
@@ -105,7 +105,7 @@
       "type": "album",
       "title": "Pisgah Up In A Brewery, Singletrack Magazine",
       "subtitle": "Singletrack Magazine, Issue 161, UK, June 2025, words and photos, shot on film and digital in the USA",
-      "coverImage": "singletrack-pisgah (10).jpg",
+      "coverImage": "singletrack-pisgah (10).JPG",
       "date": "June 2025"
     },
     {
@@ -217,10 +217,10 @@
       "gunter-award (1).jpg"
     ],
     "singletrack-pisgah": [
-      "singletrack-pisgah (1).jpg", "singletrack-pisgah (1).png", "singletrack-pisgah (2).png", "singletrack-pisgah (2).jpg", "singletrack-pisgah (3).jpg", "singletrack-pisgah (4).jpg", "singletrack-pisgah (5).jpg", "singletrack-pisgah (6).jpg", "singletrack-pisgah (7).jpg", "singletrack-pisgah (8).jpg", "singletrack-pisgah (9).jpg", "singletrack-pisgah (10).jpg"
+      "singletrack-pisgah (1).jpg", "singletrack-pisgah (1).png", "singletrack-pisgah (2).png", "singletrack-pisgah (2).jpg", "singletrack-pisgah (3).jpg", "singletrack-pisgah (4).jpg", "singletrack-pisgah (5).jpg", "singletrack-pisgah (6).jpg", "singletrack-pisgah (7).jpg", "singletrack-pisgah (8).jpg", "singletrack-pisgah (9).jpg", "singletrack-pisgah (10).JPG"
     ],
     "intertrailing-singletrack": [
-      "intertrailing-singletrack (1).jpg", "intertrailing-singletrack (2).jpg", "intertrailing-singletrack (3).jpg", "intertrailing-singletrack (4).jpg", "intertrailing-singletrack (5).jpg", "intertrailing-singletrack (6).jpg"
+      "Intertrailing-singletrack (1).jpg", "Intertrailing-singletrack (2).jpg", "Intertrailing-singletrack (3).jpg", "Intertrailing-singletrack (4).jpg", "Intertrailing-singletrack (5).jpg", "Intertrailing-singletrack (6).jpg"
     ]
   }
 }
