@@ -6,10 +6,10 @@
   "homeScrollItems": [
     {
       "id": "benidorm-biking",
-      "type": "article",
+      "type": "album",
       "title": "Benidorm Biking, Singletrack",
       "subtitle": "Singletrack Magazine, Issue 168, UK, October 2026",
-      "coverImage": "images/1769955741003.jpg",
+      "coverImage": "images/benidorm-biking (2).jpg",
       "date": "October 2026"
     },
     {
@@ -17,7 +17,7 @@
       "type": "album",
       "title": "Singletrack Issue 168 Cover, UK",
       "subtitle": "Val Mustair, Switzerland",
-      "coverImage": "images/DSC_2385.jpg",
+      "coverImage": "images/singletrack-cover.jpg",
       "date": "October 2026"
     },
     {
@@ -25,7 +25,7 @@
       "type": "article",
       "title": "Souk It Up, Calling In Sick",
       "subtitle": "Calling In Sick Issue 16, USA, shot in Morocco on expired film",
-      "coverImage": "Screenshot 2026-10-23 113545",
+      "coverImage": "images/Calling-in-sick (1).jpg",
       "date": "May 2026"
     }
   ],
@@ -74,10 +74,10 @@
     }
   ],
   "galleries": {
-    "ben-nevis": [
-      "images/ben-nevis-1.jpg", "images/ben-nevis-2.jpg", "images/ben-nevis-3.jpg", "images/ben-nevis-4.jpg",
-      "images/ben-nevis-5.jpg", "images/ben-nevis-6.jpg", "images/ben-nevis-7.jpg", "images/ben-nevis-8.jpg",
-      "images/ben-nevis-9.jpg", "images/ben-nevis-10.jpg", "images/ben-nevis-11.jpg", "images/ben-nevis-12.jpg"
+    "benidorm-biking": [
+      "images/benidorm-biking (1).jpg", "images/benidorm-biking (2).jpg", "images/benidorm-biking (3).jpg", "images/benidorm-biking (4).jpg",
+      "images/benidorm-biking (5).jpg", "images/benidorm-biking (6).jpg", "images/benidorm-biking (7).jpg", "images/benidorm-biking (8).jpg",
+      "images/benidorm-biking (9).jpg", "images/benidorm-biking (10).jpg", "images/benidorm-biking.jpg"
     ]
   }
 }
