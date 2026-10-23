@@ -1,7 +1,7 @@
 {
   "siteTitle": "Munro Snapping",
   "copyright": "Copyright Luke Bradley 2026",
-  "legalFooter": "Edinburgh, UK",
+  "legalFooter": "Edinburgh, UK • Compliant with UK Consumer Contracts Regulations.",
   "paypalBusinessEmail": "lleebb76@gmail.com",
   "homeScrollItems": [
     {
@@ -20,7 +20,7 @@
       "coverImage": "singletrack-cover.jpg",
       "date": "October 2026"
     },
-      {
+    {
       "id": "bbc-homepage",
       "type": "album",
       "title": "BBC Website",
@@ -35,7 +35,7 @@
       "subtitle": "Calling In Sick Issue 16, USA, words and photos, shot in Morocco on expired film",
       "coverImage": "Calling-in-sick (1).jpg",
       "date": "May 2026"
-    }
+    },
     {
       "id": "fhada-singletrack",
       "type": "article",
@@ -43,7 +43,7 @@
       "subtitle": "Singletrack Magazine, Issue 167, UK, June 2026, words and photos, shot in Scotland",
       "coverImage": "fhada-singletrack (5).jpg",
       "date": "May 2026"
-    }
+    },
     {
       "id": "beina-website",
       "type": "album",
@@ -123,7 +123,7 @@
       "subtitle": "Mountain Bike Rider Magazine, UK, September 2017, words and photos, shot in Belgium, France and Germany",
       "coverImage": "mbr-porsche (2).jpg",
       "date": "September 2017"
-    },
+    }
   ],
   "calendars": [
     {
@@ -132,11 +132,11 @@
       "year": "2026",
       "size": "A3 Landscape (420 x 297mm)",
       "price": 18.00,
-      "cover": "images/cal-2026-cover.jpg",
+      "cover": "cal-2026-cover.jpg",
       "insideImages": [
-        "images/cal-2026-1.jpg",
-        "images/cal-2026-2.jpg",
-        "images/cal-2026-3.jpg"
+        "cal-2026-1.jpg",
+        "cal-2026-2.jpg",
+        "cal-2026-3.jpg"
       ],
       "description": "Thirteen fine-art photographic prints celebrating Scotland's high peaks across all four seasons. Printed on heavyweight archival matte paper."
     },
@@ -146,11 +146,11 @@
       "title": "Cairngorms National Park Calendar",
       "size": "A4 Portrait (210 x 297mm)",
       "price": 15.00,
-      "cover": "images/cal-cairngorms-cover.jpg",
+      "cover": "cal-cairngorms-cover.jpg",
       "insideImages": [
-        "images/cal-cairngorms-1.jpg",
-        "images/cal-cairngorms-2.jpg",
-        "images/cal-cairngorms-3.jpg"
+        "cal-cairngorms-1.jpg",
+        "cal-cairngorms-2.jpg",
+        "cal-cairngorms-3.jpg"
       ],
       "description": "An intimate visual study of the Cairngorms plateau, pinewoods, and glacial glens."
     },
@@ -160,11 +160,11 @@
       "title": "Highland Ridges Square Calendar",
       "size": "300 x 300mm Square",
       "price": 16.00,
-      "cover": "images/cal-square-cover.jpg",
+      "cover": "cal-square-cover.jpg",
       "insideImages": [
-        "images/cal-square-1.jpg",
-        "images/cal-square-2.jpg",
-        "images/cal-square-3.jpg"
+        "cal-square-1.jpg",
+        "cal-square-2.jpg",
+        "cal-square-3.jpg"
       ],
       "description": "Clean square format showcasing remote bikepacking expeditions and mountain vistas."
     }
@@ -173,7 +173,7 @@
     "benidorm-biking": [
       "benidorm-biking (1).jpg", "benidorm-biking (2).jpg", "benidorm-biking (3).jpg", "benidorm-biking (4).jpg",
       "benidorm-biking (5).jpg", "benidorm-biking (6).jpg", "benidorm-biking (7).jpg", "benidorm-biking (8).jpg",
-      "benidorm-biking (9).jpg", "benidorm-biking (10).jpg", "benidorm-biking.jpg"
+      "benidorm-biking (9).jpg", "benidorm-biking (10).jpg", "benidorm-biking (11).jpg"
     ]
   }
 }
