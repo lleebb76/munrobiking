@@ -20,13 +20,27 @@ document.addEventListener("DOMContentLoaded", async () => {
         </a>
       `).join('');
 
-      // Enable standard mouse wheel to scroll horizontally
+      // Mouse Wheel Horizontal Scroll
       scrollContainer.addEventListener('wheel', (evt) => {
         if (evt.deltaY !== 0) {
           evt.preventDefault();
           scrollContainer.scrollLeft += evt.deltaY;
         }
       });
+
+      // Arrow Button Click Handlers
+      const btnLeft = document.getElementById('scroll-left');
+      const btnRight = document.getElementById('scroll-right');
+
+      if (btnLeft && btnRight) {
+        btnLeft.addEventListener('click', () => {
+          scrollContainer.scrollBy({ left: -350, behavior: 'smooth' });
+        });
+
+        btnRight.addEventListener('click', () => {
+          scrollContainer.scrollBy({ left: 350, behavior: 'smooth' });
+        });
+      }
     }
 
     // Populate Shop Grid
@@ -47,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Populate Album / Gallery Page
     const urlParams = new URLSearchParams(window.location.search);
-    const albumId = urlParams.get('id') || 'ben-nevis';
+    const albumId = urlParams.get('id') || 'benidorm-biking';
     const albumTitle = document.getElementById('album-title');
     const squareGrid = document.getElementById('square-grid');
 
