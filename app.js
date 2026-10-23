@@ -19,6 +19,14 @@ document.addEventListener("DOMContentLoaded", async () => {
           <p>${item.subtitle} • ${item.date}</p>
         </a>
       `).join('');
+
+      // Enable standard mouse wheel to scroll horizontally
+      scrollContainer.addEventListener('wheel', (evt) => {
+        if (evt.deltaY !== 0) {
+          evt.preventDefault();
+          scrollContainer.scrollLeft += evt.deltaY;
+        }
+      });
     }
 
     // Populate Shop Grid
@@ -45,7 +53,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (squareGrid && data.galleries[albumId]) {
       const photos = data.galleries[albumId];
-      if (albumTitle) albumTitle.innerText = data.homeScrollItems.find(i => i.id === albumId)?.title || "Photo Album";
+      const currentItem = data.homeScrollItems.find(i => i.id === albumId);
+      if (albumTitle) albumTitle.innerText = currentItem ? currentItem.title : "Photo Album";
       
       squareGrid.innerHTML = photos.map(photo => `
         <img src="${photo}" alt="Square photo" class="square-thumb" onclick="openLightbox('${photo}')">
