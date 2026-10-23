@@ -1,7 +1,7 @@
 {
   "siteTitle": "Munro Snapping",
   "copyright": "Copyright Luke Bradley 2026",
-  "legalFooter": "Edinburgh, UK • Compliant with UK Consumer Contracts Regulations.",
+  "legalFooter": "Edinburgh, UK. Payments secured by PayPal ",
   "paypalBusinessEmail": "lleebb76@gmail.com",
   "homeScrollItems": [
     {
@@ -65,7 +65,7 @@
       "type": "album",
       "title": "2025 Mark Gunter Photo Awards: 7th Place",
       "subtitle": "International cycling photography award, shot on film in Morocco",
-      "coverImage": "gunter-award (1).jpg",
+      "coverImage": "new-mountain (1).jpg",
       "date": "January 2026"
     },
     {
@@ -73,7 +73,7 @@
       "type": "album",
       "title": "Gallery Exhibits",
       "subtitle": "Various photography gallery exhibits, 2024-2026",
-      "coverImage": "glasgow-gallery (9).jpg",
+      "coverImage": "glasgow-gallery (9).JPG",
       "date": "December 2025"
     },
     {
@@ -81,7 +81,7 @@
       "type": "album",
       "title": "Intertrailing, Singletrack Magazine",
       "subtitle": "Singletrack Magazine, Issue 163, UK, November 2025, words and photos, shot in Switzerland and Italy",
-      "coverImage": "intertrailing-singletrack (1).jpg",
+      "coverImage": "fhada-singletrack (1).jpg",
       "date": "November 2025"
     },
     {
@@ -97,7 +97,7 @@
       "type": "album",
       "title": "Atlas, New Mountain Magazine",
       "subtitle": "New Mountain Magazine, Issue 2, UK, August 2025, words and photos, shot on film in Morocco",
-      "coverImage": "new-mountain (9).jpg",
+      "coverImage": "new-mountain (9).JPG",
       "date": "August 2025"
     },
     {
@@ -105,7 +105,7 @@
       "type": "album",
       "title": "Pisgah Up In A Brewery, Singletrack Magazine",
       "subtitle": "Singletrack Magazine, Issue 161, UK, June 2025, words and photos, shot on film and digital in the USA",
-      "coverImage": "singletrack-pisgah (1).jpg",
+      "coverImage": "benidorm-biking (1).jpg",
       "date": "June 2025"
     },
     {
@@ -173,7 +173,45 @@
     "benidorm-biking": [
       "benidorm-biking (1).jpg", "benidorm-biking (2).jpg", "benidorm-biking (3).jpg", "benidorm-biking (4).jpg",
       "benidorm-biking (5).jpg", "benidorm-biking (6).jpg", "benidorm-biking (7).jpg", "benidorm-biking (8).jpg",
-      "benidorm-biking (9).jpg", "benidorm-biking (10).jpg", "benidorm-biking (11).jpg"
+      "benidorm-biking (9).jpg", "benidorm-biking(10).JPG", "benidorm-biking (11).jpg"
+    ],
+    "Calling-in-sick": [
+      "Calling-in-sick (1).jpg", "Calling-in-sick (2).jpg", "Calling-in-sick (3).jpg", "Calling-in-sick (4).jpg",
+      "Calling-in-sick (5).jpg", "Calling-in-sick (6).jpg", "calling-in-sick (7).jpg"
+    ],
+    "fhada-singletrack": [
+      "fhada-singletrack (1).jpg", "fhada-singletrack (2).jpg", "fhada-singletrack (3).jpg", "fhada-singletrack (4).jpg",
+      "fhada-singletrack (5).jpg", "fhada-singletrack (6).jpg", "fhada-singletrack (7).jpg", "fhada-singletrack (8).jpg", "fhada-singletrack (9).jpg"
+    ],
+    "glasgow-gallery": [
+      "glasgow-gallery (1).jpg", "glasgow-gallery (2).jpg", "glasgow-gallery (3).jpg", "glasgow-gallery (4).jpg",
+      "glasgow-gallery (5).jpg", "glasgow-gallery (6).JPG", "glasgow-gallery (7).jpg", "glasgow-gallery (8).jpg", "glasgow-gallery (9).JPG"
+    ],
+    "new-mountain": [
+      "new-mountain (1).jpg", "new-mountain (2).JPG", "new-mountain (3).JPG", "new-mountain (4).JPG", "new-mountain (5).JPG",
+      "new-mountain (6).JPG", "new-mountain (7).JPG", "new-mountain (8).JPG", "new-mountain (9).JPG", "new-mountain (10).JPG",
+      "new-mountain (11).jpg", "new-mountain (12).jpg", "new-mountain (13).JPG"
+    ],
+    "24-mag": [
+      "24-mag (2).jpg", "24-mag (3).jpg", "24-mag (4).jpg"
+    ],
+    "mbr-porsche": [
+      "mbr-porsche (1).jpg", "mbr-porsche (2).jpg", "mbr-porsche (3).jpg", "mbr-porsche (4).jpg", "mbr-porsche (5).jpg"
+    ],
+    "sanny-singletrack": [
+      "sanny-singletrack (1).jpg", "sanny-singletrack (2).jpg", "sanny-singletrack (3).jpg", "sanny-singletrack (4).jpg", "sanny-singletrack (5).jpg"
+    ],
+    "singletrack-cover": [
+      "singletrack-cover.jpg"
+    ],
+    "bbc-homepage": [
+      "bbc-homepage.JPG"
+    ],
+    "beina-website": [
+      "beina-website (1).jpg"
+    ],
+    "sidetracked-moment": [
+      "sidetracked-moment.jpg"
     ]
   }
 }
