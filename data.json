@@ -1,32 +1,32 @@
 {
   "siteTitle": "Munro Biking",
   "copyright": "Copyright Luke Bradley 2026",
-  "legalFooter": "Trading as Munro Biking • Edinburgh, Scotland • Contact: info@munrobiking.co.uk • Compliant with UK Consumer Contracts Regulations.",
-  "paypalBusinessEmail": "luke@munrobiking.co.uk",
+  "legalFooter": "Edinburgh, UK",
+  "paypalBusinessEmail": "lleebb76@gmail.com",
   "homeScrollItems": [
     {
-      "id": "ben-nevis",
-      "type": "album",
-      "title": "Ascending Ben Nevis: A Photographic Journey",
-      "subtitle": "Highland ridges and rocky descents",
-      "coverImage": "images/ben-nevis-1.jpg",
+      "id": "benidorm-biking",
+      "type": "article",
+      "title": "Benidorm Biking, Singletrack",
+      "subtitle": "Singletrack Magazine, Issue 168, UK, October 2026",
+      "coverImage": "images/1769955741003.jpg",
       "date": "October 2026"
     },
     {
-      "id": "cairngorms-loop",
-      "type": "article",
-      "title": "Documenting the Cairngorms Loop",
-      "subtitle": "Field notes on remote multi-day bikepacking",
-      "coverImage": "images/cairngorms-1.jpg",
-      "date": "September 2026"
+      "id": "singletrack-cover",
+      "type": "album",
+      "title": "Singletrack Issue 168 Cover, UK",
+      "subtitle": "Val Mustair, Switzerland",
+      "coverImage": "images/DSC_2385.jpg",
+      "date": "October 2026"
     },
     {
-      "id": "torridon-ridge",
-      "type": "album",
-      "title": "Torridon Sandstone & Skies",
-      "subtitle": "Exploring ancient geological formations",
-      "coverImage": "images/torridon-1.jpg",
-      "date": "August 2026"
+      "id": "Calling-in-sick",
+      "type": "article",
+      "title": "Souk It Up, Calling In Sick",
+      "subtitle": "Calling In Sick Issue 16, USA, shot in Morocco on expired film",
+      "coverImage": "Screenshot 2026-10-23 113545",
+      "date": "May 2026"
     }
   ],
   "calendars": [
