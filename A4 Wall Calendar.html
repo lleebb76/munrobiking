@@ -2,45 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Munro Mountain Biking A4 Wall Calendar • Get. That. Shot.</title>
+  <title>Cairngorms National Park Calendar • Get. That. Shot.</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Fixed Left Sidebar -->
   <aside class="sidebar">
     <div class="brand">
-      <h1>Get. That. Shot.</h1>
+      <h1 id="site-title">Get. That. Shot.</h1>
       <ul class="nav-links">
         <li><a href="shop.html">Shop</a></li>
         <li><a href="index.html">Home</a></li>
         <li><a href="cart.html">Cart <span id="cart-count">🛒 (0)</span></a></li>
       </ul>
     </div>
-    <div class="sidebar-footer">
+    <div class="sidebar-footer" id="sidebar-copyright">
       Edinburgh, Scotland
     </div>
   </aside>
 
-  <!-- Main Content -->
   <main class="main-content">
-    <div class="product-detail-container">
-      <div class="product-image-box">
-        <img src="cal-cairngorms-cover.jpg" alt="Munro Mountain Biking A4 Wall Calendar">
-      </div>
-      <div class="product-info-box">
-        <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 12px;">Munro Mountain Biking A4 Wall Calendar</h2>
-        <p style="font-size: 16px; color: var(--text-muted); margin-bottom: 16px;">A4 Portrait (210 x 297mm) • <strong>£15.00</strong></p>
-        <p style="font-size: 14px; line-height: 1.6; margin-bottom: 24px;">An intimate visual study of the Cairngorms plateau, pinewoods, and glacial glens. Printed on premium heavyweight archival paper, perfect for compact spaces while delivering crisp, striking tonal detail across all twelve months.</p>
-        
-        <button class="btn-primary" onclick="addToCart({ id: 'a4-calendar', title: 'Munro Mountain Biking A4 Wall Calendar', price: 15.00, cover: 'cal-cairngorms-cover.jpg' })">Add to Cart (£15.00)</button>
-        <p id="added-notice" style="font-size: 13px; color: green; margin-top: 10px; opacity: 0; transition: opacity 0.3s;">✓ Added to cart!</p>
-      </div>
+    <div class="hero-intro">
+      <h2>Cairngorms National Park Calendar</h2>
+      <p>A4 Portrait (210 x 297mm) • £15.00</p>
+    </div>
+
+    <div style="max-width: 600px; margin-bottom: 40px;">
+      <img src="cal-cairngorms-cover.jpg" alt="Cairngorms National Park Calendar" style="width: 100%; height: auto; margin-bottom: 20px; border: 1px solid var(--border-color);">
+      <p style="line-height: 1.6; margin-bottom: 20px;">An intimate visual study of the Cairngorms plateau, pinewoods, and glacial glens. Printed on heavyweight archival matte paper.</p>
+      
+      <button onclick="addToCartAndRedirect({
+        id: 'cairngorms-calendar',
+        title: 'Cairngorms National Park Calendar',
+        price: 15.00,
+        cover: 'cal-cairngorms-cover.jpg'
+      })" class="btn-primary" style="cursor: pointer;">Add to Cart & View Cart</button>
     </div>
 
     <footer>
-      <p id="legal-footer-text">Payments secured by PayPal</p>
-      <p style="margin-top: 8px;">Copyright Luke Bradley 2026</p>
+      <p id="footer-text">Copyright Luke Bradley 2026</p>
     </footer>
   </main>
 
