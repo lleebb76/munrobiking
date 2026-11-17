@@ -43,6 +43,29 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
 
+    // Populate Shop Grid (Linking to individual product pages)
+    const shopGrid = document.getElementById('shop-grid');
+    if (shopGrid && data.calendars) {
+      shopGrid.innerHTML = data.calendars.map(cal => {
+        // Map calendar ID to its dedicated page
+        let pageLink = 'calendar-a4.html';
+        if (cal.id === 'a3-calendar') pageLink = 'calendar-a3.html';
+        if (cal.id === 'landscapes-calendar') pageLink = 'calendar-landscapes.html';
+
+        return `
+          <div class="card">
+            <a href="${pageLink}" style="text-decoration: none; color: inherit;">
+              <img src="${cal.cover}" alt="${cal.title}">
+              <h3>${cal.title}</h3>
+              <p style="font-size: 13px; color: #666; margin-bottom: 8px;">${cal.size} • £${cal.price.toFixed(2)}</p>
+              <p style="font-size: 13px; line-height: 1.4;">${cal.description}</p>
+            </a>
+            <a href="${pageLink}" class="btn-primary">View Details</a>
+          </div>
+        `;
+      }).join('');
+    }
+
     // Populate Album / Gallery Page
     const urlParams = new URLSearchParams(window.location.search);
     const albumId = urlParams.get('id');
