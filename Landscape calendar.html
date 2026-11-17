@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mountain Landscapes A3 Wall Calendar • Munro Snapping</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fixed Left Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <h1 id="site-title">Munro Snapping</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="cart.html">Cart <span id="cart-count">🛒 (0)</span></a></li>
+      </ul>
+    </div>
+    <div class="sidebar-footer" id="sidebar-copyright">
+      Edinburgh, Scotland
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="product-detail-container">
+      <div class="product-image-box">
+        <img src="cal-square-cover.jpg" alt="Mountain Landscapes A3 Wall Calendar">
+      </div>
+      <div class="product-info-box">
+        <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 12px;">Mountain Landscapes A3 Wall Calendar</h2>
+        <p style="font-size: 16px; color: var(--text-muted); margin-bottom: 16px;">300 x 300mm Square • <strong>£16.00</strong></p>
+        <p style="font-size: 14px; line-height: 1.6; margin-bottom: 24px;">Clean square format showcasing remote bikepacking expeditions, golden hour ridgelines, and isolated wilderness bothies across the UK and European mountain ranges.</p>
+        
+        <button class="btn-primary" onclick="addToCart({ id: 'landscapes-calendar', title: 'Mountain Landscapes A3 Wall Calendar', price: 16.00, cover: 'cal-square-cover.jpg' })">Add to Cart (£16.00)</button>
+        <p id="added-notice" style="font-size: 13px; color: green; margin-top: 10px; opacity: 0; transition: opacity 0.3s;">✓ Added to cart!</p>
+      </div>
+    </div>
+
+    <footer>
+      <p id="footer-text">Copyright Luke Bradley 2026</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
