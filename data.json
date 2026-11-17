@@ -127,23 +127,9 @@
   ],
   "calendars": [
     {
-      "id": "calendar-2026",
-      "title": "Munro Biking 2026 Calendar",
+      "id": "a4-calendar",
+      "title": "Munro Mountain Biking A4 Wall Calendar",
       "year": "2026",
-      "size": "A3 Landscape (420 x 297mm)",
-      "price": 18.00,
-      "cover": "cal-2026-cover.jpg",
-      "insideImages": [
-        "cal-2026-1.jpg",
-        "cal-2026-2.jpg",
-        "cal-2026-3.jpg"
-      ],
-      "description": "Thirteen fine-art photographic prints celebrating Scotland's high peaks across all four seasons. Printed on heavyweight archival matte paper."
-    },
-    {
-      "id": "cairngorms-calendar",
-      "year": "2026",
-      "title": "Cairngorms National Park Calendar",
       "size": "A4 Portrait (210 x 297mm)",
       "price": 15.00,
       "cover": "cal-cairngorms-cover.jpg",
@@ -155,9 +141,23 @@
       "description": "An intimate visual study of the Cairngorms plateau, pinewoods, and glacial glens."
     },
     {
-      "id": "highlands-calendar",
+      "id": "a3-calendar",
       "year": "2026",
-      "title": "Highland Ridges Square Calendar",
+      "title": "Munro Mountain Biking A3 Wall Calendar",
+      "size": "A3 Landscape (420 x 297mm)",
+      "price": 18.00,
+      "cover": "cal-2026-cover.jpg",
+      "insideImages": [
+        "cal-2026-1.jpg",
+        "cal-2026-2.jpg",
+        "cal-2026-3.jpg"
+      ],
+      "description": "Thirteen fine-art photographic prints celebrating Scotland's high peaks across all four seasons. Printed on heavyweight archival matte paper."
+    },
+    {
+      "id": "landscapes-calendar",
+      "year": "2026",
+      "title": "Mountain Landscapes A3 Wall Calendar",
       "size": "300 x 300mm Square",
       "price": 16.00,
       "cover": "cal-square-cover.jpg",
@@ -175,52 +175,3 @@
       "benidorm-biking (5).jpg", "benidorm-biking (6).jpg", "benidorm-biking (7).jpg", "benidorm-biking (8).jpg",
       "benidorm-biking (9).jpg", "benidorm-biking(10).JPG", "benidorm-biking (11).jpg"
     ],
-    "Calling-in-sick": [
-      "Calling-in-sick (1).jpg", "Calling-in-sick (2).jpg", "Calling-in-sick (3).jpg", "Calling-in-sick (4).jpg",
-      "Calling-in-sick (5).jpg", "Calling-in-sick (6).jpg", "calling-in-sick (7).jpg"
-    ],
-    "fhada-singletrack": [
-      "fhada-singletrack (1).jpg", "fhada-singletrack (2).jpg", "fhada-singletrack (3).jpg", "fhada-singletrack (4).jpg",
-      "fhada-singletrack (5).jpg", "fhada-singletrack (6).jpg", "fhada-singletrack (7).jpg", "fhada-singletrack (8).jpg", "fhada-singletrack (9).jpg"
-    ],
-    "glasgow-gallery": [
-      "glasgow-gallery (1).jpg", "glasgow-gallery (2).jpg", "glasgow-gallery (3).jpg", "glasgow-gallery (4).jpg",
-      "glasgow-gallery (5).jpg", "glasgow-gallery (6).JPG", "glasgow-gallery (7).jpg", "glasgow-gallery (8).jpg", "glasgow-gallery (9).JPG"
-    ],
-    "new-mountain": [
-      "new-mountain (1).jpg", "new-mountain (2).JPG", "new-mountain (3).JPG", "new-mountain (4).JPG", "new-mountain (5).JPG",
-      "new-mountain (6).JPG", "new-mountain (7).JPG", "new-mountain (8).JPG", "new-mountain (9).JPG", "new-mountain (10).JPG",
-      "new-mountain (11).jpg", "new-mountain (12).jpg", "new-mountain (13).JPG"
-    ],
-    "24-mag": [
-      "24-mag (2).jpg", "24-mag (3).jpg", "24-mag (4).jpg"
-    ],
-    "mbr-porsche": [
-      "mbr-porsche (1).jpg", "mbr-porsche (2).jpg", "mbr-porsche (3).jpg", "mbr-porsche (4).jpg", "mbr-porsche (5).jpg"
-    ],
-    "sanny-singletrack": [
-      "sanny-singletrack (1).jpg", "sanny-singletrack (2).jpg", "sanny-singletrack (3).jpg", "sanny-singletrack (4).jpg", "sanny-singletrack (5).jpg"
-    ],
-    "singletrack-cover": [
-      "singletrack-cover.jpg"
-    ],
-    "bbc-homepage": [
-      "bbc-homepage.JPG"
-    ],
-    "beina-website": [
-      "beina-website (1).jpg", "beina-website.jpg"
-    ],
-    "sidetracked-moment": [
-      "sidetracked-moment.jpg"
-    ],
-    "gunter-award": [
-      "gunter-award (1).jpg"
-    ],
-    "singletrack-pisgah": [
-      "singletrack-pisgah (1).jpg", "singletrack-pisgah (1).png", "singletrack-pisgah (2).png", "singletrack-pisgah (2).jpg", "singletrack-pisgah (3).jpg", "singletrack-pisgah (4).jpg", "singletrack-pisgah (5).jpg", "singletrack-pisgah (6).jpg", "singletrack-pisgah (7).jpg", "singletrack-pisgah (8).jpg", "singletrack-pisgah (9).jpg", "singletrack-pisgah (10).JPG"
-    ],
-    "intertrailing-singletrack": [
-      "Intertrailing-singletrack (1).jpg", "Intertrailing-singletrack (2).jpg", "Intertrailing-singletrack (3).jpg", "Intertrailing-singletrack (4).jpg", "Intertrailing-singletrack (5).jpg", "Intertrailing-singletrack (6).jpg"
-    ]
-  }
-}
