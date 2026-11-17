@@ -43,29 +43,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
 
-    // Populate Shop Grid
-    const shopGrid = document.getElementById('shop-grid');
-    if (shopGrid && data.calendars) {
-      shopGrid.innerHTML = data.calendars.map(cal => `
-        <div class="card">
-          <div>
-            <img src="${cal.cover}" alt="${cal.title}">
-            <h3>${cal.title}</h3>
-            <p style="font-size: 13px; color: #666; margin-bottom: 8px;">${cal.size} • £${cal.price.toFixed(2)}</p>
-            <p style="font-size: 13px; line-height: 1.4;">${cal.description}</p>
-          </div>
-          <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=${encodeURIComponent(data.paypalBusinessEmail)}&item_name=${encodeURIComponent(cal.title)}&amount=${cal.price}&currency_code=GBP" target="_blank" class="btn-primary">Buy with PayPal (£${cal.price.toFixed(2)})</a>
-        </div>
-      `).join('');
-    }
-
     // Populate Album / Gallery Page
     const urlParams = new URLSearchParams(window.location.search);
-    const albumId = urlParams.get('id') || 'benidorm-biking';
+    const albumId = urlParams.get('id');
     const albumTitle = document.getElementById('album-title');
     const squareGrid = document.getElementById('square-grid');
 
-    if (squareGrid && data.galleries[albumId]) {
+    if (squareGrid && albumId && data.galleries[albumId]) {
       const photos = data.galleries[albumId];
       const currentItem = data.homeScrollItems.find(i => i.id === albumId);
       if (albumTitle) albumTitle.innerText = currentItem ? currentItem.title : "Photo Album";
@@ -78,7 +62,103 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (err) {
     console.error("Error loading site data:", err);
   }
+
+  // Initialize cart functionality across pages
+  updateCartBadge();
+  if (document.getElementById('cart-content-area')) {
+    renderCartPage();
+  }
 });
+
+// Cart Management Functions
+function getCart() {
+  return JSON.parse(localStorage.getItem('munro_cart')) || [];
+}
+
+function saveCart(cart) {
+  localStorage.setItem('munro_cart', JSON.stringify(cart));
+  updateCartBadge();
+}
+
+function addToCart(product) {
+  let cart = getCart();
+  let existing = cart.find(item => item.id === product.id);
+  if (existing) {
+    existing.quantity = (existing.quantity || 1) + 1;
+  } else {
+    product.quantity = 1;
+    cart.push(product);
+  }
+  saveCart(cart);
+
+  // Show subtle added notice on product pages
+  const notice = document.getElementById('added-notice');
+  if (notice) {
+    notice.style.opacity = '1';
+    setTimeout(() => { notice.style.opacity = '0'; }, 2000);
+  }
+}
+
+function removeFromCart(productId) {
+  let cart = getCart();
+  cart = cart.filter(item => item.id !== productId);
+  saveCart(cart);
+  renderCartPage();
+}
+
+function updateCartBadge() {
+  const cart = getCart();
+  const totalCount = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+  const badge = document.getElementById('cart-count');
+  if (badge) {
+    badge.innerText = `🛒 (${totalCount})`;
+  }
+}
+
+function renderCartPage() {
+  const container = document.getElementById('cart-content-area');
+  const cart = getCart();
+
+  if (cart.length === 0) {
+    container.innerHTML = `
+      <p style="font-size: 15px; color: var(--text-muted); margin-bottom: 20px;">Your cart is currently empty.</p>
+      <a href="shop.html" class="btn-primary" style="display: inline-block; width: auto; padding: 12px 24px;">Browse Calendars</a>
+    `;
+    return;
+  }
+
+  let subtotal = 0;
+  let itemsHtml = cart.map(item => {
+    let itemTotal = item.price * (item.quantity || 1);
+    subtotal += itemTotal;
+    return `
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid var(--border-color);">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <img src="${item.cover}" alt="${item.title}" style="width: 60px; height: 60px; object-fit: cover; background: #EAE5DC;">
+          <div>
+            <h4 style="font-family: var(--font-serif); font-size: 16px; margin-bottom: 4px;">${item.title}</h4>
+            <p style="font-size: 13px; color: var(--text-muted);">£${item.price.toFixed(2)} × ${item.quantity || 1}</p>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <span style="font-weight: 500;">£${itemTotal.toFixed(2)}</span>
+          <button onclick="removeFromCart('${item.id}')" style="background: none; border: none; color: #999; cursor: pointer; font-size: 16px;">✕</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  container.innerHTML = `
+    <div style="background: var(--panel-bg); border: 1px solid var(--border-color); padding: 24px; max-width: 600px;">
+      ${itemsHtml}
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 24px; padding-top: 16px; border-top: 2px solid var(--border-color);">
+        <span style="font-family: var(--font-serif); font-size: 18px; font-weight: 600;">Total</span>
+        <span style="font-family: var(--font-serif); font-size: 20px; font-weight: 600;">£${subtotal.toFixed(2)}</span>
+      </div>
+      <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=lleebb76@gmail.com&item_name=${encodeURIComponent('Get. That. Shot. Order (' + cart.length + ' items)')}&amount=${subtotal.toFixed(2)}&currency_code=GBP" target="_blank" class="btn-primary" style="display: block; text-align: center; margin-top: 24px;">Proceed to Secure Checkout with PayPal (£${subtotal.toFixed(2)})</a>
+    </div>
+  `;
+}
 
 // Lightbox functionality
 function openLightbox(imgSrc) {
@@ -92,6 +172,7 @@ function openLightbox(imgSrc) {
 
 document.addEventListener('click', (e) => {
   if (e.target.id === 'lightbox' || e.target.id === 'lightbox-close') {
-    document.getElementById('lightbox').classList.remove('active');
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) lightbox.classList.remove('active');
   }
 });
