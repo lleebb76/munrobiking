@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Munro Mountain Biking A4 Wall Calendar • Munro Snapping</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fixed Left Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <h1 id="site-title">Munro Snapping</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="cart.html">Cart <span id="cart-count">🛒 (0)</span></a></li>
+      </ul>
+    </div>
+    <div class="sidebar-footer" id="sidebar-copyright">
+      Edinburgh, Scotland
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="product-detail-container">
+      <div class="product-image-box">
+        <img src="cal-cairngorms-cover.jpg" alt="Munro Mountain Biking A4 Wall Calendar">
+      </div>
+      <div class="product-info-box">
+        <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 12px;">Munro Mountain Biking A4 Wall Calendar</h2>
+        <p style="font-size: 16px; color: var(--text-muted); margin-bottom: 16px;">A4 Portrait (210 x 297mm) • <strong>£15.00</strong></p>
+        <p style="font-size: 14px; line-height: 1.6; margin-bottom: 24px;">An intimate visual study of the Cairngorms plateau, pinewoods, and glacial glens. Printed on premium heavyweight archival paper, perfect for compact spaces while delivering crisp, striking tonal detail across all twelve months.</p>
+        
+        <button class="btn-primary" onclick="addToCart({ id: 'a4-calendar', title: 'Munro Mountain Biking A4 Wall Calendar', price: 15.00, cover: 'cal-cairngorms-cover.jpg' })">Add to Cart (£15.00)</button>
+        <p id="added-notice" style="font-size: 13px; color: green; margin-top: 10px; opacity: 0; transition: opacity 0.3s;">✓ Added to cart!</p>
+      </div>
+    </div>
+
+    <footer>
+      <p id="footer-text">Copyright Luke Bradley 2026</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
