@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const shopGrid = document.getElementById('shop-grid');
     if (shopGrid && data.calendars) {
       shopGrid.innerHTML = data.calendars.map(cal => {
-        // Map calendar items to your exact product page filenames
         let pageLink = 'A4 Wall Calendar.html';
         if (cal.id === 'a3-calendar' || cal.id === 'calendar-2026') pageLink = 'A3 Wall Calendar.html';
         if (cal.id === 'landscapes-calendar' || cal.id === 'highlands-calendar') pageLink = 'Landscape calendar.html';
@@ -86,6 +85,117 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error loading site data:", err);
   }
 });
+
+// Initialize Cart Badge & Cart Page rendering
+  updateCartBadge();
+  if (document.getElementById('cart-content-area')) {
+    renderCartPage();
+  }
+});
+
+// Cart Management Functions
+function getCart() {
+  return JSON.parse(localStorage.getItem('munro_cart')) || [];
+}
+
+function saveCart(cart) {
+  localStorage.setItem('munro_cart', JSON.stringify(cart));
+  updateCartBadge();
+}
+
+function addToCartAndRedirect(product) {
+  let cart = getCart();
+  let existing = cart.find(item => item.id === product.id);
+  if (existing) {
+    existing.quantity = (existing.quantity || 1) + 1;
+  } else {
+    product.quantity = 1;
+    cart.push(product);
+  }
+  saveCart(cart);
+  window.location.href = 'cart.html';
+}
+
+function removeFromCart(productId) {
+  let cart = getCart();
+  cart = cart.filter(item => item.id !== productId);
+  saveCart(cart);
+  renderCartPage();
+}
+
+function updateQuantity(productId, change) {
+  let cart = getCart();
+  let item = cart.find(i => i.id === productId);
+  if (item) {
+    item.quantity = (item.quantity || 1) + change;
+    if (item.quantity <= 0) {
+      cart = cart.filter(i => i.id !== productId);
+    }
+    saveCart(cart);
+    renderCartPage();
+  }
+}
+
+function updateCartBadge() {
+  const cart = getCart();
+  const totalCount = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+  const badge = document.getElementById('cart-count');
+  if (badge) {
+    badge.innerText = `🛒 (${totalCount})`;
+  }
+}
+
+function renderCartPage() {
+  const container = document.getElementById('cart-content-area');
+  if (!container) return;
+  const cart = getCart();
+
+  if (cart.length === 0) {
+    container.innerHTML = `
+      <p style="font-size: 15px; color: var(--text-muted); margin-bottom: 20px;">Your cart is currently empty.</p>
+      <a href="shop.html" class="btn-primary" style="display: inline-block; width: auto; padding: 12px 24px;">Browse Calendars</a>
+    `;
+    return;
+  }
+
+  let subtotal = 0;
+  let itemsHtml = cart.map(item => {
+    let qty = item.quantity || 1;
+    let itemTotal = item.price * qty;
+    subtotal += itemTotal;
+    return `
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid var(--border-color);">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <img src="${item.cover}" alt="${item.title}" style="width: 60px; height: 60px; object-fit: cover; background: #EAE5DC;">
+          <div>
+            <h4 style="font-family: var(--font-serif); font-size: 16px; margin-bottom: 4px;">${item.title}</h4>
+            <p style="font-size: 13px; color: var(--text-muted);">£${item.price.toFixed(2)} each</p>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <div style="display: flex; align-items: center; gap: 8px; border: 1px solid var(--border-color); padding: 4px 8px; background: #fff;">
+            <button onclick="updateQuantity('${item.id}', -1)" style="background: none; border: none; cursor: pointer; font-size: 14px; padding: 0 4px;">−</button>
+            <span style="font-size: 14px; min-width: 20px; text-align: center;">${qty}</span>
+            <button onclick="updateQuantity('${item.id}', 1)" style="background: none; border: none; cursor: pointer; font-size: 14px; padding: 0 4px;">+</button>
+          </div>
+          <span style="font-weight: 500; min-width: 60px; text-align: right;">£${itemTotal.toFixed(2)}</span>
+          <button onclick="removeFromCart('${item.id}')" style="background: none; border: none; color: #999; cursor: pointer; font-size: 16px;" title="Remove">✕</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  container.innerHTML = `
+    <div style="background: var(--panel-bg); border: 1px solid var(--border-color); padding: 24px; max-width: 650px;">
+      ${itemsHtml}
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 24px; padding-top: 16px; border-top: 2px solid var(--border-color);">
+        <span style="font-family: var(--font-serif); font-size: 18px; font-weight: 600;">Total</span>
+        <span style="font-family: var(--font-serif); font-size: 20px; font-weight: 600;">£${subtotal.toFixed(2)}</span>
+      </div>
+      <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=lleebb76@gmail.com&item_name=${encodeURIComponent('Get. That. Shot. Order (' + cart.length + ' items)')}&amount=${subtotal.toFixed(2)}&currency_code=GBP" target="_blank" class="btn-primary" style="display: block; text-align: center; margin-top: 24px;">Proceed to Secure Checkout with PayPal (£${subtotal.toFixed(2)})</a>
+    </div>
+  `;
+}
 
 // Lightbox functionality
 function openLightbox(imgSrc) {
