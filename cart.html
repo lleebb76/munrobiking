@@ -2,40 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Shopping Cart • Get. That. Shot.</title>
+  <title>Your Cart • Get. That. Shot.</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Fixed Left Sidebar -->
   <aside class="sidebar">
     <div class="brand">
-      <h1>Get. That. Shot.</h1>
+      <h1 id="site-title">Get. That. Shot.</h1>
       <ul class="nav-links">
         <li><a href="shop.html">Shop</a></li>
         <li><a href="index.html">Home</a></li>
         <li><a href="cart.html" class="active">Cart <span id="cart-count">🛒 (0)</span></a></li>
       </ul>
     </div>
-    <div class="sidebar-footer">
+    <div class="sidebar-footer" id="sidebar-copyright">
       Edinburgh, Scotland
     </div>
   </aside>
 
-  <!-- Main Content -->
   <main class="main-content">
     <div class="hero-intro">
       <h2>Your Shopping Cart</h2>
-      <p>Review your selected items before proceeding to secure checkout.</p>
+      <p>Review items before proceeding to secure checkout.</p>
     </div>
 
-    <div id="cart-content-area" style="margin-bottom: 40px;">
-      <!-- Dynamically populated by app.js -->
-    </div>
+    <!-- Cart items render here -->
+    <div id="cart-content-area"></div>
 
     <footer>
-      <p id="legal-footer-text">Payments secured by PayPal</p>
-      <p style="margin-top: 8px;">Copyright Luke Bradley 2026</p>
+      <p id="legal-footer-text">Edinburgh, UK. Payments secured by PayPal</p>
+      <p style="margin-top: 8px;" id="footer-text">Copyright Luke Bradley 2026</p>
     </footer>
   </main>
 
