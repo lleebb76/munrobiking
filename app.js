@@ -81,15 +81,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       `).join('');
     }
 
+    // Initialize Cart Badge & Cart Page rendering safely inside the try block
+    updateCartBadge();
+    if (document.getElementById('cart-content-area')) {
+      renderCartPage();
+    }
+
   } catch (err) {
     console.error("Error loading site data:", err);
-  }
-});
-
-// Initialize Cart Badge & Cart Page rendering
-  updateCartBadge();
-  if (document.getElementById('cart-content-area')) {
-    renderCartPage();
   }
 });
 
@@ -209,6 +208,7 @@ function openLightbox(imgSrc) {
 
 document.addEventListener('click', (e) => {
   if (e.target.id === 'lightbox' || e.target.id === 'lightbox-close') {
-    document.getElementById('lightbox').classList.remove('active');
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) lightbox.classList.remove('active');
   }
 });
