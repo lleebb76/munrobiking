@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const shopGrid = document.getElementById('shop-grid');
     if (shopGrid && data.calendars) {
       shopGrid.innerHTML = data.calendars.map(cal => {
-        // Map calendar ID to its dedicated page
         let pageLink = 'calendar-a4.html';
         if (cal.id === 'a3-calendar') pageLink = 'calendar-a3.html';
         if (cal.id === 'landscapes-calendar') pageLink = 'calendar-landscapes.html';
@@ -68,11 +67,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Populate Album / Gallery Page
     const urlParams = new URLSearchParams(window.location.search);
-    const albumId = urlParams.get('id');
+    const albumId = urlParams.get('id') || 'benidorm-biking';
     const albumTitle = document.getElementById('album-title');
     const squareGrid = document.getElementById('square-grid');
 
-    if (squareGrid && albumId && data.galleries[albumId]) {
+    if (squareGrid && data.galleries[albumId]) {
       const photos = data.galleries[albumId];
       const currentItem = data.homeScrollItems.find(i => i.id === albumId);
       if (albumTitle) albumTitle.innerText = currentItem ? currentItem.title : "Photo Album";
@@ -86,7 +85,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error loading site data:", err);
   }
 
-  // Initialize cart functionality across pages
+  // Initialize cart badge and cart rendering across pages
   updateCartBadge();
   if (document.getElementById('cart-content-area')) {
     renderCartPage();
