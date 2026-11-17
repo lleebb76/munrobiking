@@ -46,17 +46,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Populate Shop Grid
     const shopGrid = document.getElementById('shop-grid');
     if (shopGrid && data.calendars) {
-      shopGrid.innerHTML = data.calendars.map(cal => `
-        <div class="card">
-          <div>
-            <img src="${cal.cover}" alt="${cal.title}">
-            <h3>${cal.title}</h3>
-            <p style="font-size: 13px; color: #666; margin-bottom: 8px;">${cal.size} • £${cal.price.toFixed(2)}</p>
-            <p style="font-size: 13px; line-height: 1.4;">${cal.description}</p>
+      shopGrid.innerHTML = data.calendars.map(cal => {
+        // Map calendar items to your exact product page filenames
+        let pageLink = 'A4 Wall Calendar.html';
+        if (cal.id === 'a3-calendar' || cal.id === 'calendar-2026') pageLink = 'A3 Wall Calendar.html';
+        if (cal.id === 'landscapes-calendar' || cal.id === 'highlands-calendar') pageLink = 'Landscape calendar.html';
+
+        return `
+          <div class="card">
+            <a href="${pageLink}" style="text-decoration: none; color: inherit;">
+              <img src="${cal.cover}" alt="${cal.title}">
+              <h3>${cal.title}</h3>
+              <p style="font-size: 13px; color: #666; margin-bottom: 8px;">${cal.size} • £${cal.price.toFixed(2)}</p>
+              <p style="font-size: 13px; line-height: 1.4;">${cal.description}</p>
+            </a>
+            <a href="${pageLink}" class="btn-primary">View Details</a>
           </div>
-          <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=${encodeURIComponent(data.paypalBusinessEmail)}&item_name=${encodeURIComponent(cal.title)}&amount=${cal.price}&currency_code=GBP" target="_blank" class="btn-primary">Buy with PayPal (£${cal.price.toFixed(2)})</a>
-        </div>
-      `).join('');
+        `;
+      }).join('');
     }
 
     // Populate Album / Gallery Page
