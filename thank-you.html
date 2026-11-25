@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You • Get. That. Shot.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="brand">
+      <h1 id="site-title">Get. That. Shot.</h1>
+      <ul class="nav-links">
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">Cart <span id="cart-count">🛒 (0)</span></a></li>
+      </ul>
+    </div>
+    <div class="sidebar-footer" id="sidebar-copyright">
+      Edinburgh, Scotland
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="hero-intro">
+      <h2>Thanks for your order</h2>
+      <p>Your payment has been received via PayPal.</p>
+    </div>
+
+    <div style="background: var(--panel-bg); border: 1px solid var(--border-color); padding: 24px; max-width: 600px; margin-bottom: 40px;">
+      <p style="line-height: 1.6; margin-bottom: 16px;">Thank you for supporting independent photography and journalism. I'll get your calendar packed up and posted out from Edinburgh shortly.</p>
+      <p style="line-height: 1.6; color: var(--text-muted); font-size: 14px; margin-bottom: 24px;">A confirmation receipt has been sent to your email address by PayPal.</p>
+      <a href="index.html" class="btn-primary" style="display: inline-block; width: auto; padding: 12px 24px;">Back to Homepage</a>
+    </div>
+
+    <footer>
+      <p id="footer-text">Copyright Luke Bradley 2026</p>
+    </footer>
+  </main>
+
+  <script>
+    // Clear the cart once the order is complete
+    localStorage.removeItem('munro_cart');
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
