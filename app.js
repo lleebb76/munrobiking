@@ -184,6 +184,24 @@ function renderCartPage() {
     `;
   }).join('');
 
+  const params = new URLSearchParams({
+    cmd: '_cart',
+    upload: '1',
+    business: 'lleebb76@gmail.com',
+    currency_code: 'GBP',
+    return: 'https://lleebb76.github.io/munrobiking/thank-you.html',
+    cancel_return: 'https://lleebb76.github.io/munrobiking/cart.html'
+  });
+
+  cart.forEach((item, index) => {
+    const num = index + 1;
+    params.append(`item_name_${num}`, item.title);
+    params.append(`amount_${num}`, Number(item.price).toFixed(2));
+    params.append(`quantity_${num}`, String(item.quantity || 1));
+  });
+
+  const paypalCheckoutUrl = `https://www.paypal.com/cgi-bin/webscr?${params.toString()}`;
+
   container.innerHTML = `
     <div style="background: var(--panel-bg); border: 1px solid var(--border-color); padding: 24px; max-width: 650px;">
       ${itemsHtml}
@@ -191,7 +209,7 @@ function renderCartPage() {
         <span style="font-family: var(--font-serif); font-size: 18px; font-weight: 600;">Total</span>
         <span style="font-family: var(--font-serif); font-size: 20px; font-weight: 600;">£${subtotal.toFixed(2)}</span>
       </div>
-      <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=lleebb76@gmail.com&item_name=${encodeURIComponent('Get. That. Shot. Order (' + cart.length + ' items)')}&amount=${subtotal.toFixed(2)}&currency_code=GBP" target="_blank" class="btn-primary" style="display: block; text-align: center; margin-top: 24px;">Proceed to Secure Checkout with PayPal (£${subtotal.toFixed(2)})</a>
+      <a href="${paypalCheckoutUrl}" target="_blank" class="btn-primary" style="display: block; text-align: center; margin-top: 24px;">Proceed to Secure Checkout with PayPal (£${subtotal.toFixed(2)})</a>
     </div>
   `;
 }
