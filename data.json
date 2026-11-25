@@ -128,45 +128,42 @@
   "calendars": [
     {
       "id": "calendar-2026",
-      "title": "Munro Biking 2026 Calendar",
-      "year": "2026",
-      "size": "A3 Landscape (420 x 297mm)",
+      "title": ""A Year in Mountains" mountain biking A3 2027 calendar",
+      "year": "2027",
+      "size": "A3 Portrait (420 x 297mm)",
       "price": 0.01,
-      "cover": "cal-2026-cover.jpg",
+      "cover": "bike-1.jpg",
       "insideImages": [
-        "cal-2026-1.jpg",
-        "cal-2026-2.jpg",
-        "cal-2026-3.jpg"
+        "bike-1.jpg",
+        "bike-2.jpg"
       ],
-      "description": "Thirteen fine-art photographic prints celebrating Scotland's high peaks across all four seasons. Printed on heavyweight archival matte paper."
+      "description": "Thirteen photos from a year of dragging mountain bikes to the summit of mountains across Europe."
     },
     {
       "id": "cairngorms-calendar",
       "year": "2026",
-      "title": "Cairngorms National Park Calendar",
+      "title": ""A Year in Mountains" mountain biking A4 2027 calendar",
       "size": "A4 Portrait (210 x 297mm)",
       "price": 0.01,
-      "cover": "cal-cairngorms-cover.jpg",
+      "cover": "bike-1.jpg",
       "insideImages": [
-        "cal-cairngorms-1.jpg",
-        "cal-cairngorms-2.jpg",
-        "cal-cairngorms-3.jpg"
+        "bike-1.jpg",
+        "bike-2.jpg"
       ],
-      "description": "An intimate visual study of the Cairngorms plateau, pinewoods, and glacial glens."
+      "description": "Thirteen photos from a year of dragging mountain bikes to the summit of mountains across Europe."
     },
     {
       "id": "highlands-calendar",
       "year": "2026",
-      "title": "Highland Ridges Square Calendar",
-      "size": "300 x 300mm Square",
+      "title": ""A Year in Mountains" landscapes A3 2027 calendar",
+      "size": "A3 Portrait (420 x 297mm)",
       "price": 0.01,
-      "cover": "cal-square-cover.jpg",
+      "cover": "Landscape-1.jpg",
       "insideImages": [
-        "cal-square-1.jpg",
-        "cal-square-2.jpg",
-        "cal-square-3.jpg"
+        "Landscape-1.jpg",
+        "Landscape-2.jpg"
       ],
-      "description": "Clean square format showcasing remote bikepacking expeditions and mountain vistas."
+      "description": "A mountain for every month of the year, this time without the bikes."
     }
   ],
   "galleries": {
