@@ -132,10 +132,10 @@
       "year": "2027",
       "size": "A4 Portrait (210 x 297mm)",
       "price": 0.01,
-      "cover": "bike-1.jpg",
+      "cover": "Bike-1.jpg",
       "insideImages": [
-        "bike-1.jpg",
-        "bike-2.jpg"
+        "Bike-1.jpg",
+        "Bike-2.jpg"
       ],
       "description": "Thirteen photos from a year of dragging mountain bikes to the summit of mountains across Europe."
     },
@@ -145,10 +145,10 @@
       "year": "2027",
       "size": "A3 Portrait (420 x 297mm)",
       "price": 0.01,
-      "cover": "bike-1.jpg",
+      "cover": "Bike-1.jpg",
       "insideImages": [
-        "bike-1.jpg",
-        "bike-2.jpg"
+        "Bike-1.jpg",
+        "Bike-2.jpg"
       ],
       "description": "Thirteen photos from a year of dragging mountain bikes to the summit of mountains across Europe."
     },
