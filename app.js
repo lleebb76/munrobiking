@@ -189,8 +189,8 @@ function renderCartPage() {
     upload: '1',
     business: 'lleebb76@gmail.com',
     currency_code: 'GBP',
-    return: 'https://lleebb76.github.io/munrobiking/thank-you.html',
-    cancel_return: 'https://lleebb76.github.io/munrobiking/cart.html'
+    return: 'https://www.getthatshot.co.uk/thank-you.html',
+    cancel_return: 'https://www.getthatshot.co.uk/cart.html'
   });
 
   cart.forEach((item, index) => {
