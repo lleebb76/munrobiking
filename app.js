@@ -1,3 +1,4 @@
+app.js
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const res = await fetch('data.json');
@@ -48,8 +49,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (shopGrid && data.calendars) {
       shopGrid.innerHTML = data.calendars.map(cal => {
         let pageLink = 'A4WallCalendar.html';
-        if (cal.id === 'a3-calendar' || cal.id === 'A3 Wall Calendar') pageLink = 'A3WallCalendar.html';
-        if (cal.id === 'landscapes-calendar' || cal.id === 'A3 landscape calendar') pageLink = 'Landscapecalendar.html';
+        if (cal.id === 'a3-calendar') pageLink = 'A3WallCalendar.html';
+        if (cal.id === 'landscapes-calendar') pageLink = 'Landscapecalendar.html';
 
         return `
           <div class="card">
