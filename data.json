@@ -128,7 +128,7 @@
   "calendars": [
     {
       "id": "calendar-2026",
-      "title": ""A Year in Mountains" mountain biking A3 2027 calendar",
+      "title": "A Year in Mountains mountain biking A3 2027 calendar",
       "year": "2027",
       "size": "A3 Portrait (420 x 297mm)",
       "price": 0.01,
@@ -142,7 +142,7 @@
     {
       "id": "cairngorms-calendar",
       "year": "2026",
-      "title": ""A Year in Mountains" mountain biking A4 2027 calendar",
+      "title": "A Year in Mountains mountain biking A4 2027 calendar",
       "size": "A4 Portrait (210 x 297mm)",
       "price": 0.01,
       "cover": "bike-1.jpg",
@@ -155,7 +155,7 @@
     {
       "id": "highlands-calendar",
       "year": "2026",
-      "title": ""A Year in Mountains" landscapes A3 2027 calendar",
+      "title": "A Year in Mountains landscapes A3 2027 calendar",
       "size": "A3 Portrait (420 x 297mm)",
       "price": 0.01,
       "cover": "Landscape-1.jpg",
