@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const shopGrid = document.getElementById('shop-grid');
     if (shopGrid && data.calendars) {
       shopGrid.innerHTML = data.calendars.map(cal => {
-        let pageLink = 'A4 Wall Calendar.html';
-        if (cal.id === 'a3-calendar' || cal.id === 'calendar-2026') pageLink = 'A3 Wall Calendar.html';
-        if (cal.id === 'landscapes-calendar' || cal.id === 'highlands-calendar') pageLink = 'Landscape calendar.html';
+        let pageLink = 'A4WallCalendar.html';
+        if (cal.id === 'a3-calendar' || cal.id === 'A3 Wall Calendar') pageLink = 'A3WallCalendar.html';
+        if (cal.id === 'landscapes-calendar' || cal.id === 'A3 landscape calendar') pageLink = 'Landscapecalendar.html';
 
         return `
           <div class="card">
