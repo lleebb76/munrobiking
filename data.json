@@ -134,26 +134,26 @@
       "price": 0.01,
       "cover": "bike-1.jpg",
       "insideImages": [
-        "bike-1.jpg",
-        "bike-2.jpg"
-      ],
-      "description": "Thirteen photos from a year of dragging mountain bikes to the summit of mountains across Europe."
-    },
-    {
-      "id": "landscapes-calendar",
-      "year": "2027",
-      "title": "A Year in Mountains mountain biking A4 2027 calendar",
-      "size": "A4 Portrait (210 x 297mm)",
-      "price": 0.01,
-      "cover": "bike-1.jpg",
-      "insideImages": [
-        "bike-1.jpg",
-        "bike-2.jpg"
+        "Bike-1.jpg",
+        "Bike-2.jpg"
       ],
       "description": "Thirteen photos from a year of dragging mountain bikes to the summit of mountains across Europe."
     },
     {
       "id": "a3-calendar",
+      "year": "2027",
+      "title": "A Year in Mountains mountain biking A4 2027 calendar",
+      "size": "A3 Portrait (420 x 297mm)",
+      "price": 0.01,
+      "cover": "Bike-1.jpg",
+      "insideImages": [
+        "Bike-1.jpg",
+        "Bike-2.jpg"
+      ],
+      "description": "Thirteen photos from a year of dragging mountain bikes to the summit of mountains across Europe."
+    },
+    {
+      "id": "landscapes-calendar",
       "year": "2027",
       "title": "A Year in Mountains landscapes A3 2027 calendar",
       "size": "A3 Portrait (420 x 297mm)",
